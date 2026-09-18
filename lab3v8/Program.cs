@@ -73,30 +73,30 @@ namespace Lab3
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-            Console.WriteLine("=== ЛАБОРАТОРНА РОБОТА №3 (Варіант 8: TemporaryFile) ===");
+            Console.WriteLine(" ЛАБОРАТОРНА РОБОТА №3 (Варіант 8: TemporaryFile) ");
 
             // Сценарій 1: Використання оператора using
-            Console.WriteLine("\n--- Сценарій 1: Автоматичне звільнення через 'using' ---");
+            Console.WriteLine("\n Сценарій 1: Автоматичне звільнення через 'using' ");
             using (TemporaryFile file1 = new TemporaryFile("session_data_1.tmp"))
             {
                 file1.Write("Кешовані дані сесії №1");
             } 
 
             // Сценарій 2: Явний виклик Dispose()
-            Console.WriteLine("\n--- Сценарій 2: Явний виклик Dispose() ---");
+            Console.WriteLine("\n Сценарій 2: Явний виклик Dispose() ");
             TemporaryFile file2 = new TemporaryFile("session_data_2.tmp");
             file2.Write("Кешовані дані сесії №2");
             file2.Dispose();
 
             // Сценарій 3: Без Dispose() — робота збирача сміття (GC) та деструктора
-            Console.WriteLine("\n--- Сценарій 3: Об'єкт без Dispose() (робота GC та деструктора) ---");
+            Console.WriteLine("\n Сценарій 3: Об'єкт без Dispose() (робота GC та деструктора) ");
             CreateUnreleasedObject();
 
             Console.WriteLine("\nПримусовий запуск Garbage Collector (GC.Collect)...");
             GC.Collect();
             GC.WaitForPendingFinalizers();
 
-            Console.WriteLine("\n=== Програму завершено ===");
+            Console.WriteLine("\n Програму завершено ");
         }
 
         // Окремий метод, щоб посилання вийшло з області видимості

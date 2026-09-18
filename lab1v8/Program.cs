@@ -52,7 +52,7 @@ namespace lab1v8
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("=== Лабораторна робота №1 (Варіант 8: Animal) ===\n");
+            Console.WriteLine(" Лабораторна робота №1 (Варіант 8: Animal) \n");
 
             Animal animal1 = new Animal("Собака", "Рекс", 3);
             Animal animal2 = new Animal("Кіт", "Мурчик", 2);

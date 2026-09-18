@@ -81,30 +81,30 @@ namespace Lab2
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-            Console.WriteLine("=== Початок виконання програми ===");
+            Console.WriteLine("Початок виконання програми");
 
             CreateAndUseObjects();
 
-            Console.WriteLine("\n=== Завершення Main, підготовка до GC ===");
+            Console.WriteLine("\nЗавершення Main, підготовка до GC");
             Console.WriteLine("Примусовий виклик збирача сміття (GC)...");
 
             GC.Collect();
             GC.WaitForPendingFinalizers();
 
-            Console.WriteLine("=== Програму завершено ===");
+            Console.WriteLine("Програму завершено");
         }
 
         static void CreateAndUseObjects()
         {
-            Console.WriteLine("\n--- 1. Створення об'єкта через конструктор за замовчуванням ---");
+            Console.WriteLine("\n1. Створення об'єкта через конструктор за замовчуванням");
             Animal animal1 = new Animal();
             animal1.Speak();
 
-            Console.WriteLine("\n--- 2. Створення об'єкта через параметризований конструктор ---");
+            Console.WriteLine("\n2. Створення об'єкта через параметризований конструктор");
             Animal animal2 = new Animal("Собака", "Рекс", 4);
             animal2.Speak();
 
-            Console.WriteLine("\n--- 3. Створення об'єкта з некоректним віком (перевірка валідації) ---");
+            Console.WriteLine("\n3. Створення об'єкта з некоректним віком (перевірка валідації)");
             Animal animal3 = new Animal("Кіт", "Мурчик", -3);
             animal3.Speak();
         }

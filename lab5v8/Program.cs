@@ -15,7 +15,7 @@ namespace OOP
 
         public virtual void Execute()
         {
-            Console.WriteLine($"[Transaction] Обробка транзакції на суму: {Amount:C}");
+            Console.WriteLine($"[Transaction] Обробка транзакції на суму: {Amount:F2} грн");
         }
     }
 
@@ -31,7 +31,7 @@ namespace OOP
 
         public override void Execute()
         {
-            Console.WriteLine($"[Deposit] Поповнення рахунку {DestinationAccount} на суму: {Amount:C}");
+            Console.WriteLine($"[Deposit] Поповнення рахунку {DestinationAccount} на суму: {Amount:F2} грн");
         }
     }
 
@@ -47,7 +47,7 @@ namespace OOP
 
         public override void Execute()
         {
-            Console.WriteLine($"[Withdrawal] Зняття коштів з рахунку {SourceAccount} на суму: {Amount:C}");
+            Console.WriteLine($"[Withdrawal] Зняття коштів з рахунку {SourceAccount} на суму: {Amount:F2} грн");
         }
     }
 
@@ -65,7 +65,7 @@ namespace OOP
 
         public override void Execute()
         {
-            Console.WriteLine($"[Transfer] Переказ з рахунку {FromAccount} на рахунок {ToAccount} на суму: {Amount:C}");
+            Console.WriteLine($"[Transfer] Переказ з рахунку {FromAccount} на рахунок {ToAccount} на суму: {Amount:F2} грн");
         }
     }
 
@@ -95,7 +95,7 @@ namespace OOP
             }
 
             Console.WriteLine("\nРезультат агрегації");
-            Console.WriteLine($"Загальна сума всіх транзакцій: {totalAmount:C}");
+            Console.WriteLine($"Загальна сума всіх транзакцій: {totalAmount:F2} грн");
         }
     }
 }

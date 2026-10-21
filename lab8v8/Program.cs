@@ -6,9 +6,6 @@ namespace Lab8
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-            Console.WriteLine("ЛАБОРАТОРНА РОБОТА №8 (Варіант 8: CollectionHelper<T>.Any)");
-            Console.WriteLine();
-
             // 1. List<int>: чи є від'ємні числа
             Console.WriteLine("1. Список чисел (List<int>)");
 
@@ -115,7 +112,7 @@ namespace Lab8
         // Допоміжний метод: виводить умову та результат перевірки
         private static void PrintResult(string condition, bool result)
         {
-            Console.WriteLine($"Умова: {condition} -> Результат: {result}");
+            Console.WriteLine($"Умова: {condition}. Результат: {result}");
         }
     }
 }
